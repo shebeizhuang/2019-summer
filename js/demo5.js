@@ -10,6 +10,7 @@ var courrent = 0;
 var rightBtn = document.querySelector(".rightBtn");
 //点击时触发事件
 rightBtn.onclick = function() {
+    clearInterval(autoPlayTimer)
     //使用字面量对象表示法
     //第一次调用animate函数，目的是使当前这张图片的opacity=0
     animate(oLis[courrent], {opacity: 0});
@@ -27,6 +28,7 @@ rightBtn.onclick = function() {
 //左点击 和右点击基本一样
 var leftBtn = document.querySelector(".leftBtn");
 leftBtn.onclick = function() {
+    clearInterval(autoPlayTimer)
     animate(oLis[courrent], {opacity: 0});
     courrent--;
     if(courrent == -1) {
@@ -89,6 +91,7 @@ showCurrentPagePoint(0);
 //let 命令每次循环都会执行一次，声明一个新变量（但初始化的值不一样）？？？
 for (let i = 0; i < tLis.length; i++) {
     tLis[i].onclick = function(){
+        clearInterval(autoPlayTimer)
         //console.log(i)
         animate(oLis[courrent],{opacity:0});
         courrent = i;
