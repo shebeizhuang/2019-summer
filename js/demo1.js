@@ -32,6 +32,7 @@
     //再把图片容器往左移
       newLeft = parseInt(wrap.style.left)-600;
     }
+    
     wrap.style.left = newLeft + "px";
    }
    function prev_pic () {
@@ -70,7 +71,7 @@
    autoPlay();  
    }
 
-
+//实现功能：点击按钮跳转到对应的图片
   for (var i = 0, len = dots.length; i < len; i++){
     (function(i){
       dots[i].onclick = function () {

@@ -1,0 +1,71 @@
+
+
+* {
+    margin:0;
+    padding:0;
+    list-style: none;
+  }
+  a{
+    text-decoration: none;
+  }
+  /* 可视窗口 */
+  .container {
+    position: relative;
+    margin:100px auto 0 auto;
+    width: 600px;
+    height: 400px;
+    box-shadow: 0 0 5px green;
+    overflow: hidden;
+  }
+  /* 图片 */
+  .container .demo img {
+    width: 600px;
+    height: 400px;
+  }
+  /* 按钮外面的盒子 */
+  .container .circles {
+    position: absolute;
+    right: 0;
+    bottom:20px;
+    width: 200px;
+    height: 10px;
+    z-index: 2;
+ }
+ /* 每个圆点 */
+ .container .circles span {
+    margin-left: 5px;
+    display: inline-block;/*为了设置宽高属性*/
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: green;/*圆点背景*/
+    text-align: center;/*把文本排列到中间*/
+    color:white;/*字体颜色*/
+    cursor: pointer;/*手指*/
+  }
+
+  .container .circles .on{
+    background-color: red;
+  }
+  .container .arrow {
+    position: absolute;
+    top: 35%;
+    color: #444;
+    padding:0px 14px;
+    border-radius: 50%;
+    font-size: 50px;
+    z-index: 2;
+    display: none;
+  }
+  .container .arrow_left {
+    left: 10px;
+  }
+  .container .arrow_right {
+    right: 10px;
+  }
+  .container:hover .arrow {
+    display: block;
+  }
+  .container .arrow:hover {
+    background-color: rgba(0,0,0,0.2);
+  }

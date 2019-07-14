@@ -148,7 +148,7 @@ function animate(div,obj) {
         if(flag == true){
         clearInterval(div.timer);
         }
-    },30);
+    },50);
 
 }
 
